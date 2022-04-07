@@ -1,6 +1,30 @@
+# App Breakdown
+
+## components
+- footer
+- search result
+- searchbar
+- navbar
+
+## pages
+- 404
+- home
+- top headlines
+- category choice (technology)
+
+# Dependencies through npm
+- config
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Scripts to run
+
+In the project directory, you can run to install all dependencies if you wanting to see the developement locally on your computer:
+
+### `npm i`
 
 ## Available Scripts
 
