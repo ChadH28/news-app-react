@@ -1,14 +1,26 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/navbar/navbar.component';
+import HomePage from './pages/home/home.page';
+import Technology from './pages/top-headlines/top-headlines.page';
+import TopHeadline from './pages/technology/technology.page';
+import NotFound from './pages/404/404.page';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Daily Croissant
+    <div>
+      <Navbar />
+      <div className='section'>
+        <Routes>
+          <Route exact path='/' element={<HomePage />} />
+          <Route exact path='/technology' element={<Technology />} />
+          <Route exact path='/top-headline' element={<TopHeadline />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </div>
     </div>
   );
 }
 
 export default App;
-
-
