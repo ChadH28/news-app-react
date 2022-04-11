@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Navbar from './components/navbar/navbar.component';
 import HomePage from './pages/home/home.page';
 import Technology from './pages/top-headlines/top-headlines.page';
@@ -9,7 +9,8 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className='app'>
+    <BrowserRouter >
       <Navbar />
       <div className='section'>
         <Routes>
@@ -19,6 +20,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
+    </BrowserRouter>
     </div>
   );
 }
