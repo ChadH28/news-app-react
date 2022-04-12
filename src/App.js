@@ -1,8 +1,8 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Navbar from './components/navbar/navbar.component';
 import HomePage from './pages/home/home.page';
-import Technology from './pages/top-headlines/top-headlines.page';
-import TopHeadline from './pages/technology/technology.page';
+import TopHeadline from './pages/top-headlines/top-headlines.page';
+import Technology from './pages/technology/technology.page';
 import NotFound from './pages/404/404.page';
 
 import './App.css';
