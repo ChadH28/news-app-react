@@ -16,16 +16,29 @@ export const Article = (
 
   return (
     <div className="card">
-      <img alt='monsterImg' src={`${urlToImage}`}/>
+      {/* used conditions because some values in article array was displaying as null */}
+      {
+        urlToImage === null ? <div>No image for News Article</div>
+        : 
+        <img alt='newsImg' src={`${urlToImage}`}/>
+      }
       <h2>
         {title} 
       </h2>
+      {
+        author === null ? <h6>Unknown Author | Published {publishedAt}</h6> 
+        : 
       <h6>
         By {author} | Published {publishedAt}
       </h6>
+      }
+      {
+        content === null ? <p>No Content Provided for Article</p> 
+        : 
       <p>
         {content}
       </p>
+      }
       <p>
         <a href={`${url}`}>Read full article here</a>
       </p>
