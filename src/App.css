@@ -4,3 +4,8 @@ h1{
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
+.section{
+  height: 100vh;
+  overflow: hidden;
+}

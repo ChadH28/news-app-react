@@ -7,6 +7,7 @@ import Technology from './pages/technology/technology.page';
 import NotFound from './pages/404/404.page';
 import SearchQuery from './pages/search-query/search-query.page';
 import './App.css';
+import Footer from './components/footer/footer.component';
 
 
 class App extends React.Component {
@@ -26,7 +27,7 @@ class App extends React.Component {
     return (
       <div className='app'>
         <BrowserRouter >
-          <Navbar handleChange={this.handleChange} searchField={this.state.searchField}  />
+          <Navbar handleChange={this.handleChange} searchField={this.state.searchField} />
           <div className='container'>
             <Routes>
               <Route exact path='/' element={<HomePage />} />
@@ -36,6 +37,7 @@ class App extends React.Component {
               <Route path='*' element={<NotFound />} />
             </Routes>
           </div>
+          <Footer />
         </BrowserRouter>
       </div>
     );
