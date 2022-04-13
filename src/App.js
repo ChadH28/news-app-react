@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Navbar from './components/navbar/navbar.component';
 import HomePage from './pages/home/home.page';
-import TopHeadline from './pages/top-headlines/top-headlines.page';
+import Science from './pages/science/science.page';
 import Technology from './pages/technology/technology.page';
 import NotFound from './pages/404/404.page';
 import SearchQuery from './pages/search-query/search-query.page';
@@ -32,7 +32,7 @@ class App extends React.Component {
               <Route exact path='/' element={<HomePage />} />
               <Route exact path='/search-query' element={<SearchQuery handleChange={this.handleChange} searchField={this.state.searchField} />} />
               <Route exact path='/technology' element={<Technology />} />
-              <Route exact path='/top-headline' element={<TopHeadline />} />
+              <Route exact path='/science' element={<Science />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
           </div>

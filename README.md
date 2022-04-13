@@ -8,8 +8,8 @@
 
 ## pages
 - 404
-- home
-- top headlines
+- home (top headlines)
+- category choice (Science)
 - category choice (technology)
 
 # Dependencies through npm
