@@ -1,10 +1,15 @@
-.content{
-
-}
-
 .card-img-top{
   height: 230px;
 }
+
+.card-noImg-top{
+  height: 230px;
+  background-color: #D4D4D4;
+  text-align: center;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
 
 .card-title{
   font-size: 19px;
