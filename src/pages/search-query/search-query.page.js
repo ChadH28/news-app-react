@@ -14,8 +14,7 @@ class SearchQuery extends React.Component {
 
     this.state = {
       news: [],
-      searchField: '',
-      searchResult: ''
+      searchField: null
     }
   }
 
@@ -34,9 +33,23 @@ class SearchQuery extends React.Component {
       .then(gatheredNews => this.setState({ news: gatheredNews.articles }))
   }
 
+  componentDidUpdate = async () => {
+    // fetch documentiation proivided by newsAPI
+    await fetch(
+      `https://newsapi.org/v2/everything?q=${this.props.searchField}&sortBy=popularity&pageSize=10`,
+      {
+        headers: {
+          Authorization: `Bearer 88d5e530d4e44f3f9b420ae48150781d`,
+        }
+      })
+      .then(response => response.json())
+      // .then(gatheredNews =>  console.log('gatheredNews response:' , gatheredNews.articles))
+      .then(gatheredNews => this.setState({ news: gatheredNews.articles }))
+  }
+
   render() {
     // destructuring this.state
-    const { news} = this.state;
+    const { news } = this.state;
     const searchField = this.props.searchField;
 
     return (
@@ -45,7 +58,7 @@ class SearchQuery extends React.Component {
         <div className='news-container'>
           <h1>Search results for: {searchField} </h1>
           {/* Component called in  */}
-          <ArticleList news={news}/>
+          <ArticleList news={news} />
         </div>
       </div>
     );

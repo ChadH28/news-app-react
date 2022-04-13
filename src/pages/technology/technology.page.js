@@ -19,7 +19,7 @@ class Tech extends React.Component {
 
   componentDidMount = async () => {
     await fetch(
-    `https://newsapi.org/v2/top-headlines?category=technology&country=us&pageSize=10`,
+    `https://newsapi.org/v2/top-headlines?category=technology&country=za&pageSize=10`,
     {
       headers: {
         Authorization: `Bearer 88d5e530d4e44f3f9b420ae48150781d`,

@@ -19,7 +19,7 @@ class TopHeadline extends React.Component {
 
   componentDidMount = async () => {
     await fetch(
-    `https://newsapi.org/v2/top-headlines?category=general&country=us&pageSize=10`,
+    `https://newsapi.org/v2/top-headlines?category=science&country=za&pageSize=10`,
     {
       headers: {
         Authorization: `Bearer 88d5e530d4e44f3f9b420ae48150781d`,
@@ -32,17 +32,14 @@ class TopHeadline extends React.Component {
 
 
   render() {
-    // destructuring this.state
     const { news } = this.state
-
     return (
       // Calling cardList parent and the card children props so Card/item(child) => cardlist/gallery(parent) => App(main)
       <div className="section">
         <div className='news-container'>
           <h1>Top Headlines</h1>
           {/* Component called in  */}
-          <ArticleList news={news}>
-          </ArticleList>
+          <ArticleList news={news}/>
         </div>
       </div>
     );
