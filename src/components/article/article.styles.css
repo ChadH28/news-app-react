@@ -8,8 +8,13 @@
   text-align: center;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
+  padding: 30px;
 }
 
+.card-noImg-top span{
+  margin: auto;
+
+}
 
 .card-title{
   font-size: 19px;

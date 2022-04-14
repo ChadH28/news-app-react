@@ -12,12 +12,6 @@
 - category choice (technology)
 - search result page
 
-# Enviroment Variables
-- add .env file in root of app
-- add enviroment variables:
-  - REACT_APP_API_KEY = "a5ed448a48fc49a7b60007499047e63a"
-  - REACT_APP_URL_LINK = "https://newsapi.org"
-  - good to go ;)
 
 
 # Getting Started with Create React App
@@ -30,6 +24,13 @@ In the project directory, you can run to install all dependencies if you wanting
 
 ### `npm i`
 
+# Enviroment Variables
+- add .env file in root of app
+- add enviroment variables:
+  - REACT_APP_API_KEY = "a5ed448a48fc49a7b60007499047e63a"
+  - REACT_APP_URL_LINK = "https://newsapi.org"
+  - good to go ;)
+  
 ## Available Scripts
 
 In the project directory, you can run:
