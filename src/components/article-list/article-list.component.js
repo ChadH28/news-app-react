@@ -3,7 +3,7 @@ import React from 'react';
 import './article-list.component';
 
 export const ArticleList = props => {
-  console.log(props)
+  // console.log(props)
   return (
     <div className='container'>
       <div className='row'>

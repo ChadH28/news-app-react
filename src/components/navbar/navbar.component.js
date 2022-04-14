@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Searchbar } from '../searchbar/searchbar.component';
 
 const Navbar = ({handleChange,searchField}) => {
-  console.log('State in navbar', searchField )
+  // console.log('State in navbar', searchField )
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">

@@ -20,7 +20,10 @@ class App extends React.Component {
   }
 
   handleChange = (e) => {
-    this.setState({ searchField: e.target.value }, () => console.log('state in appjs of event handler', this.state))
+    this.setState({ 
+      searchField: e.target.value },
+      // () => console.log('state in appjs of event handler', this.state)
+    )
   }
 
   render() {

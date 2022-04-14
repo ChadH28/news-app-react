@@ -14,7 +14,6 @@ export const Article = (
     }
   }
 ) => {
-console.log(publishedAt)
   return (
     <div className='col-sm-4 col-md-4 col-lg-4'>
       <div className="card">
