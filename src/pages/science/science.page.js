@@ -1,10 +1,7 @@
 import React from 'react';
 import { ArticleList } from '../../components/article-list/article-list.component';
-// import dotenv from 'dotenv';
-// dotenv.config();
-// console.log(process.env.REACT_APP_METEORITE_STRIKE_DATASET);
-// "API_KEY": "88d5e530d4e44f3f9b420ae48150781d",
-// "URL_LINK": "https://newsapi.org/"
+const url = process.env.REACT_APP_URL_LINK
+const key = process.env.REACT_APP_API_KEY
 
 class TopHeadline extends React.Component {
   // Class based
@@ -19,10 +16,10 @@ class TopHeadline extends React.Component {
 
   componentDidMount = async () => {
     await fetch(
-    `https://newsapi.org/v2/top-headlines?category=science&country=za&pageSize=10`,
+    `${url}/v2/top-headlines?category=science&country=za&pageSize=10`,
     {
       headers: {
-        Authorization: `Bearer 88d5e530d4e44f3f9b420ae48150781d`,
+        Authorization: `Bearer ${key}`,
       }
     })
       .then(response => response.json())
@@ -37,7 +34,7 @@ class TopHeadline extends React.Component {
       // Calling cardList parent and the card children props so Card/item(child) => cardlist/gallery(parent) => App(main)
       <div className="section">
         <div className='news-container'>
-          <h1>Top Headlines</h1>
+          <h1>Science</h1>
           {/* Component called in  */}
           <ArticleList news={news}/>
         </div>

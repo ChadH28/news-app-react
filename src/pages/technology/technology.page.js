@@ -1,10 +1,7 @@
 import React from 'react';
 import { ArticleList } from '../../components/article-list/article-list.component';
-// import dotenv from 'dotenv';
-// dotenv.config();
-// console.log(process.env.REACT_APP_METEORITE_STRIKE_DATASET);
-// "API_KEY": "88d5e530d4e44f3f9b420ae48150781d",
-// "URL_LINK": "https://newsapi.org/"
+const url = process.env.REACT_APP_URL_LINK
+const key = process.env.REACT_APP_API_KEY
 
 class Tech extends React.Component {
   // Class based
@@ -19,10 +16,10 @@ class Tech extends React.Component {
 
   componentDidMount = async () => {
     await fetch(
-    `https://newsapi.org/v2/top-headlines?category=technology&country=za&pageSize=10`,
+    `${url}/v2/top-headlines?category=technology&country=za&pageSize=10`,
     {
       headers: {
-        Authorization: `Bearer 88d5e530d4e44f3f9b420ae48150781d`,
+        Authorization: `Bearer ${key}`,
       }
     })
       .then(response => response.json())
