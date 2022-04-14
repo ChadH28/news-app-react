@@ -18,6 +18,7 @@ class Tech extends React.Component {
     await fetch(
     `${url}/v2/top-headlines?category=technology&country=za&pageSize=10`,
     {
+      mode: 'cors',
       headers: {
         Authorization: `Bearer ${key}`,
       }

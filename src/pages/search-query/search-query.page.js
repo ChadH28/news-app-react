@@ -35,6 +35,7 @@ class SearchQuery extends React.Component {
     await fetch(
       `${url}/v2/everything?q=${this.props.searchField}&sortBy=popularity&pageSize=10`,
       {
+        mode: 'cors',
         headers: {
           Authorization: `Bearer ${key}`,
         }

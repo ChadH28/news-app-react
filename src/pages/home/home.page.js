@@ -18,8 +18,9 @@ class HomePage extends React.Component {
     await fetch(
     `${url}/v2/top-headlines?category=general&country=za&pageSize=10`,
     {
+      mode: 'cors',
       headers: {
-        Authorization: `Bearer ${key}`,
+        Authorization: `Bearer ${key}`
       }
     })
       .then(response => response.json())
