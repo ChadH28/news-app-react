@@ -14,7 +14,7 @@ export const Article = (
     }
   }
 ) => {
-
+console.log(publishedAt)
   return (
     <div className='col-sm-4 col-md-4 col-lg-4'>
       <div className="card">
@@ -32,7 +32,7 @@ export const Article = (
             author === null ? <h6 className="card-subtitle mb-2 text-muted">Unknown Author | Published {publishedAt}</h6>
               :
               <h6 className="card-subtitle mb-2 text-muted">
-                By {author} | Published {publishedAt}
+                By {author} | Published {new Date(publishedAt).toDateString()}
               </h6>
           }
           {
