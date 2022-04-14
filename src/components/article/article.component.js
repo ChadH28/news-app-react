@@ -20,7 +20,7 @@ export const Article = (
       <div className="card">
         {/* used conditions because some values in article array was displaying as null */}
         {
-          urlToImage === null ? <div className="card-noImg-top">No image for News Article</div>
+          urlToImage === null || urlToImage === '' ? <div className="card-noImg-top">No image for News Article</div>
             :
             <img alt='newsImg' src={`${urlToImage}`} className="card-img-top" />
         }
