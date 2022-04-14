@@ -33,10 +33,10 @@ class SearchQuery extends React.Component {
   componentDidUpdate = async () => {
     // fetch documentiation proivided by newsAPI
     await fetch(
-      `https://newsapi.org/v2/everything?q=${this.props.searchField}&sortBy=popularity&pageSize=10`,
+      `${url}/v2/everything?q=${this.props.searchField}&sortBy=popularity&pageSize=10`,
       {
         headers: {
-          Authorization: `Bearer 88d5e530d4e44f3f9b420ae48150781d`,
+          Authorization: `Bearer ${key}`,
         }
       })
       .then(response => response.json())

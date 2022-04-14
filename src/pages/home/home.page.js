@@ -1,7 +1,8 @@
 import React from 'react';
 import { ArticleList } from '../../components/article-list/article-list.component';
-const url = process.env.REACT_APP_URL_LINK
-const key = process.env.REACT_APP_API_KEY
+const url = process.env.REACT_APP_URL_LINK;
+const key = process.env.REACT_APP_API_KEY;
+// console.log(url, key)
 
 class HomePage extends React.Component {
   // Class based

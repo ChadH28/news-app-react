@@ -2,7 +2,6 @@
 
 ## components
 - footer
-- search result
 - searchbar
 - navbar
 
@@ -11,6 +10,7 @@
 - home (top headlines)
 - category choice (Science)
 - category choice (technology)
+- search result page
 
 # Enviroment Variables
 - add .env file in root of app

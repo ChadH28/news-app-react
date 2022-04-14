@@ -7,7 +7,7 @@ import Technology from './pages/technology/technology.page';
 import NotFound from './pages/404/404.page';
 import SearchQuery from './pages/search-query/search-query.page';
 import './App.css';
-import Footer from './components/footer/footer.component';
+// import Footer from './components/footer/footer.component';
 
 
 class App extends React.Component {
@@ -37,7 +37,7 @@ class App extends React.Component {
               <Route path='*' element={<NotFound />} />
             </Routes>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>
       </div>
     );
